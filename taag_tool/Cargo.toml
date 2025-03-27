@@ -1,0 +1,7 @@
+[package]
+name = "taag_tool"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+figleter = "0.2.2"

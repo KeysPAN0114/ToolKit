@@ -12,7 +12,9 @@ fn main() -> std::io::Result<()> {
         "Y" | "y" | "Yes" | "yes" | "YES" => {
             println!("Enter the folder name:");
             io::stdin().read_line(&mut _folder_name).unwrap();
-            fs::create_dir(&_folder_name.trim());
+            let _ = fs::create_dir(&_folder_name.trim());
+            let _img_path = format!("{}/image", &_folder_name.trim());
+            let _ = fs::create_dir(&_img_path);
         },
         "N" | "n" | "No" | "no" | "NO" => {},
         _ => {},
